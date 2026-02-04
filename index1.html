@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Sublimados - Precios Febrero 2026</title>
+    <style>
+        :root {
+            --primary: #0069d9;
+            --primary-dark: #004085;
+            --accent: #e63946;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --dark: #343a40;
+            --success: #28a745;
+            --shadow-sm: 0 3px 6px rgba(0, 0, 0, 0.08);
+            --shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 2.8rem 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 0.4rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.45rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            margin-top: 0.9rem;
+        }
+
+        main {
+            max-width: 1300px;
+            margin: 2.5rem auto;
+            padding: 0 1.2rem;
+        }
+
+        .search-container {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+
+        #search {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.9rem 1.3rem;
+            font-size: 1.05rem;
+            border: 2px solid #dee2e6;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        #search:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(0, 105, 217, 0.15);
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: clamp(1.6rem, 4vw, 2.1rem);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            background: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 640px;
+            /* evita que se achique demasiado en móvil */
+        }
+
+        th,
+        td {
+            padding: 1.1rem 1.4rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td strong {
+            color: var(--primary);
+        }
+
+        tr:hover {
+            background: #f1f8ff;
+            transition: var(--transition);
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 1.18rem;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        /* ────────────── MODO MÓVIL: filas como tarjetas ────────────── */
+        @media (max-width: 768px) {
+            .table-wrapper {
+                overflow-x: hidden;
+            }
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 1.6rem;
+                border: 1px solid #dee2e6;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--shadow-sm);
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #f0f4f8;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            td:before {
+                position: absolute;
+                top: 1.1rem;
+                left: 1.4rem;
+                width: 45%;
+                padding-right: 1rem;
+                white-space: nowrap;
+                content: attr(data-label);
+                text-align: left;
+                font-weight: 600;
+                color: #495057;
+            }
+
+            td:last-child {
+                border-bottom: 0;
+            }
+
+            .price {
+                font-size: 1.35rem;
+            }
+        }
+
+        footer {
+            background: var(--dark);
+            color: #adb5bd;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Catálogo Sublimados</h1>
+        <p>Precios actualizados — Febrero 2026</p>
+        <div class="badge">Precios con IVA incluido</div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar producto o categoría...">
+        </div>
+
+        <!-- ROPA -->
+        <section data-category="ropa">
+            <h2>Ropa</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Babero y delantal</td>
+                            <td data-label="Descripción">Body sublimable bebé blanco • Delantal Bandera Uruguay •
+                                Delantal liso s/bolsillo SW (packs x5: Amarillo, Azul Francia, Azul Marino, Blanco,
+                                Rojo)</td>
+                            <td data-label="Precio" class="price">Babero $319 • Delantal $449 • <strong>Pack
+                                    $819</strong> (~$164 c/u)</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Camiseta Sublimable</td>
+                            <td data-label="Descripción">Subliprint 100% poliéster + dama ML cuello V negra, dama
+                                spandex, algodón premium, poly-cotton, etc.</td>
+                            <td data-label="Precio" class="price">$399 — $649</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Camiseta Manga Larga</td>
+                            <td data-label="Descripción">Algodón con puño (blanca, gris melange, naranja, negra) + dama
+                                ML cuello V</td>
+                            <td data-label="Precio" class="price">$599</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Camisetas Dry</td>
+                            <td data-label="Descripción">Dry texturada / DryCool (varios colores + dama verde fluo)</td>
+                            <td data-label="Precio" class="price">$379</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Camisetas Niño</td>
+                            <td data-label="Descripción">Manga larga con puño + variantes verdes</td>
+                            <td data-label="Precio" class="price">$479 — $499</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Buzos</td>
+                            <td data-label="Descripción">Felpa SW (Azul Marino, Gris Melange)</td>
+                            <td data-label="Precio" class="price">$899</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Pantalones / Bermudas</td>
+                            <td data-label="Descripción">Cargo Flex Verde • Bermuda Cargo SW Azul</td>
+                            <td data-label="Precio" class="price">$1.099 — $1.490</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- HOGAR -->
+        <section data-category="hogar">
+            <h2>Hogar</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Almohadones</td>
+                            <td data-label="Descripción">Funda eco sublimable 40×40 cm</td>
+                            <td data-label="Precio" class="price">$519</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Azulejos</td>
+                            <td data-label="Descripción">Varios tamaños (10×10 a 20×30 cm)</td>
+                            <td data-label="Precio" class="price">$229 — $299</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAZAS Y VIDRIO -->
+        <section data-category="tazas">
+            <h2>Tazas y Vidrio</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Tazas / Jarros "AA"</td>
+                            <td data-label="Descripción">11 oz + interior y asa de color</td>
+                            <td data-label="Precio" class="price">$244 — $249</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Jarros Esmerilados</td>
+                            <td data-label="Descripción">Neón y estándar (11–16 oz)</td>
+                            <td data-label="Precio" class="price">$269 — $418</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- METÁLICOS -->
+        <section data-category="metal">
+            <h2>Metálicos</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Botellas Metálicas</td>
+                            <td data-label="Descripción">Aluminio / acero 500–750 ml</td>
+                            <td data-label="Precio" class="price">$299 — $799</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Térmicos</td>
+                            <td data-label="Descripción">Degradé y acero/bambú 500 ml</td>
+                            <td data-label="Precio" class="price">$549 — $799</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ACCESORIOS -->
+        <section data-category="accesorios">
+            <h2>Accesorios</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Gorros</td>
+                            <td data-label="Descripción">Trucker / clásicos / modelo 5001 (varios colores)</td>
+                            <td data-label="Precio" class="price">$259 — $289</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Mouse Pad y Posavasos</td>
+                            <td data-label="Descripción">Mouse pad redondo/rectangular • Posavasos pack ×6</td>
+                            <td data-label="Precio" class="price">Mouse $225 • Posavasos $320/pack</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Mochilas y Cartucheras</td>
+                            <td data-label="Descripción">Cartuchera eco 21×17 cm</td>
+                            <td data-label="Precio" class="price">$299</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PAPELERÍA / INSUMOS -->
+        <section data-category="papel">
+            <h2>Papelería e Insumos</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Transfer (ya sublimado)</td>
+                            <td data-label="Descripción">Papel transfer tela clara/oscura A4 pack ×10</td>
+                            <td data-label="Precio" class="price">$680 — $999</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Papel Sublimación</td>
+                            <td data-label="Descripción">Rollo + manga 190×125</td>
+                            <td data-label="Precio" class="price">$2.190 — $4.190 rollo • Manga $699</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Vinilo Adhesivo Premium</td>
+                            <td data-label="Descripción">A3/A4 pack ×100 hojas</td>
+                            <td data-label="Precio" class="price">$3.490 — $6.100</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Cinta para llaveros</td>
+                            <td data-label="Descripción">2 cm × 100 m</td>
+                            <td data-label="Precio" class="price">$899 rollo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">Imán</td>
+                            <td data-label="Descripción">Plancha/bobina 0.4–0.5 mm</td>
+                            <td data-label="Precio" class="price">$419 — $499</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- MDF / CHAPAS / OTROS -->
+        <section data-category="otros">
+            <h2>MDF, Chapas y Otros</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Descripción</th>
+                            <th>Precio Final (UYU)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Artículo">Chapas</td>
+                            <td data-label="Descripción">15×20 o 20×30 cm (brillo/texturizada)</td>
+                            <td data-label="Precio" class="price">$299 — $399</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Artículo">MDF</td>
+                            <td data-label="Descripción">Placas y formas varias 3 mm</td>
+                            <td data-label="Precio" class="price">$299 — $399</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 ALCG Branding - Montevideo, Uruguay | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('search');
+        const sections = document.querySelectorAll('section');
+
+        searchInput.addEventListener('input', () => {
+            const term = searchInput.value.toLowerCase().trim();
+
+            sections.forEach(section => {
+                let visible = false;
+                const rows = section.querySelectorAll('tbody tr');
+
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(term)) {
+                        row.style.display = '';
+                        visible = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                // Mostrar/ocultar sección completa
+                section.style.display = visible || term === '' ? '' : 'none';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
