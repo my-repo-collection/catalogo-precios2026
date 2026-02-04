@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos Sublimados - Precios Febrero 2026</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            /* Azul moderno */
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+            --accent-color: #ff6b6b;
+            /* Toque vibrante */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #0056d2);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+            transition: var(--transition);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* UX Enhancements */
+        .search-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Productos Sublimados</h1>
+        <p>Precios actualizados para Febrero 2026 </p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Lista de Precios</h2>
+            <input type="text" id="search" class="search-input" placeholder="Buscar por artículo...">
+            <table id="catalog-table">
+                <thead>
+                    <tr>
+                        <th>Artículo</th>
+                        <th>Descripción</th>
+                        <th>Precio Final (UYU)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Babero y delantal</td>
+                        <td>Body Sublimable Blanco (babero para bebé); Delantal Bandera Uruguay; Delantal Liso
+                            S/Bolsillo SW (packs de 5 unidades en colores: Amarillo, Azul Francia, Azul Marino, Blanco,
+                            Rojo)</td>
+                        <td>Babero: $319 por unidad; Delantal Bandera: $449 por unidad; Packs Delantal: $819 por pack
+                            (~$164 c/u)</td>
+                    </tr>
+                    <tr>
+                        <td>Almohadones</td>
+                        <td>Funda de Almohadón Sublimable Eco 40x40 cm (funda para almohadón)</td>
+                        <td>$519 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Azulejos</td>
+                        <td>Azulejos sublimables en diferentes tamaños (10x10 cm a 20x30 cm)</td>
+                        <td>$229 - $299 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Camiseta Sublimable</td>
+                        <td>Camiseta Subliprint (100% poliéster, varios colores y estilos); Nuevas variaciones: Camiseta
+                            Dama ML Cuello V Negra, Camiseta Dama Subliprint II Verde Claro, Camiseta Dama V
+                            Blanca/Negra Spandex; Camiseta Algodon Premium Verde; Camiseta Basica PolyCotton Verde
+                            Irlandes</td>
+                        <td>$399 por unidad (estándar); Variaciones Dama: $399 - $549 por unidad; Premium: $649 por
+                            unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Camiseta Manga Larga</td>
+                        <td>Camiseta Algodon Manga Larga con puño (colores: Blanca, Gris Melange, Naranja, Negra);
+                            Camiseta Dama ML Cuello V Blanca</td>
+                        <td>$599 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Camisetas Dry</td>
+                        <td>Camisetas Dry Texturada (100% poliéster, varios colores); Nuevas variaciones: 100% Dry
+                            Texturada (Amarillo, Francia, Blanca, Celeste, Fucsia, Gris, Negra); Camiseta dama DryCool
+                            II Verde Fluo</td>
+                        <td>$379 por unidad (estándar); Texturadas: $379 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Camisetas Niño</td>
+                        <td>Camiseta Niño manga larga con puño (Azul Marino, Blanca, Gris Melange, Negra); Camiseta Niño
+                            Verde</td>
+                        <td>$479 - $499 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Gorros</td>
+                        <td>Gorros Trucker o clásicos; Nueva variación: Gorro 5001 (colores: Amarillo, Azul Marino,
+                            Beige, Blanco, Celeste, Francia, Negro, Rojo)</td>
+                        <td>$259 - $289 por unidad (estándar); Gorro 5001: $275 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Metálicos</td>
+                        <td>Botellas y cantimploras metálicas sublimables (aluminio o acero, 500-750 ml)</td>
+                        <td>$299 - $799 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Metálicos Térmicos</td>
+                        <td>Botellas degradé o termos de acero/bambú (500 ml, térmicos)</td>
+                        <td>$549 - $799 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Mochilas y cartucheras</td>
+                        <td>Cartuchera Sublimable Eco 21x17 cm; Mochilas no encontradas directamente.</td>
+                        <td>$299 por cartuchera</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse pad y posavasos</td>
+                        <td>Mouse Pad (20 cm diámetro o 18x22 cm); Posavasos (pack de 6, 10 cm)</td>
+                        <td>Mouse Pad: $225 por unidad; Posavasos: $320 por pack (~$53 c/u)</td>
+                    </tr>
+                    <tr>
+                        <td>Imán</td>
+                        <td>Imán en plancha o bobina (0.4-0.5 mm espesor, por metro o bobina 30 m)</td>
+                        <td>$419 - $499 por metro o bobina</td>
+                    </tr>
+                    <tr>
+                        <td>Puzzles</td>
+                        <td>No encontrado directamente; sugerir como MDF personalizable.</td>
+                        <td>No disponible</td>
+                    </tr>
+                    <tr>
+                        <td>Vidrios y esmerilados</td>
+                        <td>Jarros esmerilados neon o estándar (11-16 oz, vidrio frosted)</td>
+                        <td>$269 - $418 por unidad o pack</td>
+                    </tr>
+                    <tr>
+                        <td>Tazas, Jarros "AA"</td>
+                        <td>Jarros sublimables "AA" (11 oz); Nueva variación: Jarro Sub. Int. y asa de color</td>
+                        <td>$244 por unidad (estándar); Jarro color: $249 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Transfer (ya sublimado)</td>
+                        <td>Papel Transfer para tela clara/oscura (A4, pack de 10 hojas)</td>
+                        <td>$680 - $999 por pack</td>
+                    </tr>
+                    <tr>
+                        <td>Transfer sublimable</td>
+                        <td>Papel Sublimación en rollo; Nueva: Manga para Sublimacion 190x125</td>
+                        <td>$2.190 - $4.190 por rollo; Manga: $699 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Chapas</td>
+                        <td>Chapas sublimables (15x20 cm o 20x30 cm, brillo o texturada)</td>
+                        <td>$299 - $399 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>MDF</td>
+                        <td>Placas o adornos MDF sublimables (varios tamaños y formas, 3 mm espesor)</td>
+                        <td>$299 - $399 por unidad o pack</td>
+                    </tr>
+                    <tr>
+                        <td>SubliPACK Rígidos Premium</td>
+                        <td>Vinilo Adhesivo Sublimable (A3/A4, pack de 100 hojas)</td>
+                        <td>$3.490 - $6.100 por pack</td>
+                    </tr>
+                    <tr>
+                        <td>Cinta para llaveros</td>
+                        <td>Cinta Sublimable (2 cm x 100 m)</td>
+                        <td>$899 por rollo</td>
+                    </tr>
+                    <tr>
+                        <td>Pantalones</td>
+                        <td>Pantalon Cargo Flex Verde</td>
+                        <td>$1.490 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Bermudas</td>
+                        <td>Bermuda Cargo SW Azul</td>
+                        <td>$1.099 por unidad</td>
+                    </tr>
+                    <tr>
+                        <td>Buzos</td>
+                        <td>Buzo De Felpa Sw (Azul Marino, Gris Melange)</td>
+                        <td>$899 por unidad</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ALCG Branding - Montevideo, Uruguay | Todos los
+            derechos reservados.</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('search');
+        const table = document.getElementById('catalog-table');
+        const rows = table.querySelectorAll('tbody tr');
+
+        searchInput.addEventListener('input', function () {
+            const filter = searchInput.value.toLowerCase();
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
