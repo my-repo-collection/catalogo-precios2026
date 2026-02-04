@@ -110,8 +110,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 640px;
-            /* evita que se achique demasiado en móvil */
+            min-width: 100%;
         }
 
         th,
@@ -144,10 +143,25 @@
             white-space: nowrap;
         }
 
-        /* ────────────── MODO MÓVIL: filas como tarjetas ────────────── */
+        /* Mejora para descripciones largas */
+        td[data-label="Descripción"] {
+            white-space: normal;
+            word-break: break-word;
+            hyphens: auto;
+        }
+
+        /* MODO MÓVIL */
         @media (max-width: 768px) {
+            body {
+                font-size: 0.96rem;
+            }
+
             .table-wrapper {
-                overflow-x: hidden;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin: 0 -1.2rem;
+                padding: 0 1.2rem 0.8rem;
+                border-radius: 0;
             }
 
             table,
@@ -166,19 +180,22 @@
             }
 
             tr {
-                margin-bottom: 1.6rem;
+                margin-bottom: 1.8rem;
                 border: 1px solid #dee2e6;
                 border-radius: 10px;
                 overflow: hidden;
                 box-shadow: var(--shadow-sm);
+                background: white;
             }
 
             td {
                 border: none;
                 border-bottom: 1px solid #f0f4f8;
                 position: relative;
-                padding-left: 50%;
+                padding: 1.1rem 1.4rem 1.1rem 48%;
                 text-align: right;
+                word-break: break-word;
+                hyphens: auto;
             }
 
             td:before {
@@ -187,7 +204,7 @@
                 left: 1.4rem;
                 width: 45%;
                 padding-right: 1rem;
-                white-space: nowrap;
+                white-space: normal;
                 content: attr(data-label);
                 text-align: left;
                 font-weight: 600;
@@ -199,7 +216,12 @@
             }
 
             .price {
-                font-size: 1.35rem;
+                font-size: 1.32rem;
+                display: block;
+                text-align: right;
+                white-space: normal;
+                word-break: break-word;
+                padding-top: 0.3rem;
             }
         }
 
@@ -498,7 +520,6 @@
                     }
                 });
 
-                // Mostrar/ocultar sección completa
                 section.style.display = visible || term === '' ? '' : 'none';
             });
         });
